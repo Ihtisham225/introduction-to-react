@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lesson 2</title>
+</head>
+<body>
+    
+    <!-- An Example Div -->
+    <div id="app"></div>
+
+    <!-- React CDN -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    
+    <!-- Babel Script For JSX (JavaScript Syntax Extension) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Custom React Code -->
+    <script type="text/jsx">
+        const app = document.getElementById("app");
+
+        function Header()
+        {
+            return <h1>Components are functions which return UI elements.</h1>
+        }
+
+        ReactDOM.render(<Header />, app);
+    </script>
+</body>
+</html>

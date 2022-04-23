@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lesson 5</title>
+</head>
+<body>
+    
+    <!-- An Example Div -->
+    <div id="app"></div>
+
+    <!-- React CDN -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    
+    <!-- Babel Script For JSX (JavaScript Syntax Extension) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Custom React Code -->
+    <script type="text/jsx">
+        const app = document.getElementById("app");
+
+        function createTitle(title)
+        {
+            if(title)
+            {
+                return title
+            }
+            else
+            {
+                return 'Default Title'
+            }
+        }
+
+        function Header({title})
+        {
+            return <h1>{createTitle(title)}</h1>
+        }
+
+        function HomePage()
+        {
+            return (
+                <div>
+                    <Header title="If else condtion in props"/>
+                    <Header title="You can write a separate function for checking if there is a title or not and then call that function in header component."/>
+                </div>
+            )
+        }
+
+        ReactDOM.render(<HomePage />, app);
+    </script>
+</body>
+</html>

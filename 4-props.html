@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lesson 4</title>
+</head>
+<body>
+    
+    <!-- An Example Div -->
+    <div id="app"></div>
+
+    <!-- React CDN -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    
+    <!-- Babel Script For JSX (JavaScript Syntax Extension) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Custom React Code -->
+    <script type="text/jsx">
+        const app = document.getElementById("app");
+
+        function Header({title})
+        {
+            return <h1>{`Title: ${title}`}</h1>
+        }
+
+        function HomePage()
+        {
+            return (
+                <div>
+                    <Header title="props represent properties in react"/>
+                    <Header title="props are used to pass data from one component to another"/>
+                </div>
+            )
+        }
+
+        ReactDOM.render(<HomePage />, app);
+    </script>
+</body>
+</html>
